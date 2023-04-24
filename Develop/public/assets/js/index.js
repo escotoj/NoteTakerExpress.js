@@ -25,8 +25,9 @@ const hide = (elem) => {
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
+// here is the error 1
 const getNotes = () =>
-  fetch('/api/notes', {
+  fetch('api/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -170,7 +171,7 @@ const renderNoteList = async (notes) => {
   }
 };
 
-// Gets notes from the db and renders them to the sidebar
+// Gets notes from the db and renders them to the sidebar ERROR 2
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
 if (window.location.pathname === '/notes') {
@@ -180,4 +181,5 @@ if (window.location.pathname === '/notes') {
   noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
 
-getAndRenderNotes();
+getAndRenderNotes(); 
+// also ERROR
