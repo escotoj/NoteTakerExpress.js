@@ -1,7 +1,12 @@
 const router = require("express").Router();
-// const path = require('path');
+const path = require('path');
 const fs = require("fs");
-const uuid = require("uuid");
+const {v4: uuidv4 } = require("uuid");
+const db = require('../db/db.json')
+
+router.get("/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/notes.html"));
+});
 
 router.get("/api/notes", (req, res) => {
   fs.readFile("db/db.json", "utf8", (err, notes) => {
@@ -14,7 +19,8 @@ router.get("/api/notes", (req, res) => {
 // path.join(__dirname, '..', 'db', 'db.json')
 
 router.post("/api/notes", (req, res) => {
-  const { title, text, id } = req.body;
+  const { title, text } = req.body;
+  const id = uuidv4();
   if (title && text && id) {
     fs.readFile("db/db.json", "utf8", (err, notes) => {
       if (err) {
@@ -38,6 +44,17 @@ router.post("/api/notes", (req, res) => {
   }
 });
 
-router.delete("/api/notes/:id", (req, res) => {});
+router.delete("/api/notes/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id)
+  for(let i = 0; i < db.length; i++) {
+    if(db[i].id === id) {
+      db.splice(i, 1)
+      fs.writeFileSync("db/db.json",JSON.stringify(db, null, 2))
+    }
+    break;
+  }
+  res.json(true)
+});
 
 module.exports = router;
