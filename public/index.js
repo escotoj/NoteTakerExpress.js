@@ -27,7 +27,7 @@ let activeNote = {};
 
 // here is the error 1
 const getNotes = () =>
-  fetch('api/notes', {
+  fetch('/api/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
