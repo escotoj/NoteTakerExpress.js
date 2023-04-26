@@ -23,6 +23,7 @@ License: MIT License
 Github: https://github.com/escotoj/NoteTakerExpress.js
 Deployed App: 
 
+Screenshot of deployed app with zero errors. 
 ![this is an image](assets/NotetakerExpress.png)
 
 ## Credits
