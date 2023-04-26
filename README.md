@@ -9,10 +9,9 @@ Deployed on Heroku: https://notetakerexpressv2.herokuapp.com/notes
 
 ## Table of Contents
 
-- [Credits](#Credits)
 - [License](#License)
 - [Links](#Links)
-- [Contribute](#Contribute)
+- [Credits](#Credits)
 - [Future](#Future)
 - [Contact](#Contact)
 
@@ -21,7 +20,7 @@ Deployed on Heroku: https://notetakerexpressv2.herokuapp.com/notes
 
 License: MIT License
 
-## Links and Screenshots
+## Links
 
 Github: https://github.com/escotoj/NoteTakerExpress.js 
 
