@@ -4,6 +4,9 @@
 
 FullStack application that uses Express.js to connect the backend. On the fontend it uses bootstrap CDN and CSS stylesheet.
 
+Deployed on Heroku: https://notetakerexpressv2.herokuapp.com/notes
+
+
 ## Table of Contents
 
 - [Credits](#Credits)
@@ -20,8 +23,7 @@ License: MIT License
 
 ## Links and Screenshots
 
-Github: https://github.com/escotoj/NoteTakerExpress.js
-Deployed App: 
+Github: https://github.com/escotoj/NoteTakerExpress.js 
 
 Screenshot of deployed app with zero errors. 
 ![this is an image](assets/NotetakerExpress.png)
